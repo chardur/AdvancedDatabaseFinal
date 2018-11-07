@@ -1,0 +1,17 @@
+CREATE MASTER KEY ENCRYPTION BY   
+PASSWORD = 'cs3550masterkey';
+
+BACKUP MASTER KEY TO FILE = 'C:\DataFiles\masterKey'   
+    ENCRYPTION BY PASSWORD = 'cs3550'
+
+CREATE CERTIFICATE KnifeCoCert  
+   WITH SUBJECT = 'KnifeCo Certificate';
+
+CREATE SYMMETRIC KEY passwordskey  
+    WITH ALGORITHM = AES_256  
+    ENCRYPTION BY CERTIFICATE KnifeCoCert;
+
+backup certificate KnifeCoCert to file = 'C:\DataFiles\KnifeCoCert.cer'
+with private key (file = 'C:\DataFiles\KnifeCoKey.pvk',
+encryption by password = 'cs3550')
+
