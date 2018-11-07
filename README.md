@@ -1,5 +1,5 @@
-##Advanced Database Summer 18 MSSQL:
-##Premise:
+# Advanced Database Summer 18 MSSQL:
+## Premise:
 You have received a contract job as a SQL developer contractor. A knife manufacturing company wants you to design their database so that they can put a front end website on top of it. Your job is to take their data (OriginalDataFiles.zip) and design a database.
 They have the following requirements:
 - No duplication of data
